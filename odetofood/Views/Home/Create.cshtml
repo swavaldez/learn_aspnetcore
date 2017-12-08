@@ -1,0 +1,16 @@
+﻿@using odetofood.Models;
+@model odetofood.Models.Restaurant
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Create</h1>
+    <form method="post">
+        <input asp-for="Name" />
+        <select asp-for="Cuisine" asp-items="@Html.GetEnumSelectList<CuisineType>()"></select>
+
+        <input type="submit" name="save" value="Save" />
+    </form>
+</body>
+</html>
